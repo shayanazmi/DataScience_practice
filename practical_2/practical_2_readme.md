@@ -23,15 +23,9 @@ This notebook builds a tiny neural network from scratch (using Keras' `Sequentia
 
 ## 🧠 Model Architecture
 
-```
-Input (2 features)
-      │
-      ▼
-Dense Layer (4 neurons, ReLU activation)   ← Hidden layer
-      │
-      ▼
-Dense Layer (1 neuron, Sigmoid activation) ← Output layer
-```
+<img width="1180" height="798" alt="image" src="https://github.com/user-attachments/assets/992a1e32-0f5e-43be-942a-23656ae03c0a" />
+
+
 
 - **Hidden layer**: 4 fully connected neurons with ReLU activation, introducing non-linearity.
 - **Output layer**: 1 neuron with Sigmoid activation, squashing the output into a `[0, 1]` probability for binary classification.
