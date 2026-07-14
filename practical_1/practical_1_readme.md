@@ -73,9 +73,6 @@ where:
 
 After training, the perceptron correctly classifies all AND gate inputs and demonstrates how a simple neural network can learn linearly separable patterns.
 
-## Educational Objective
-
-This practical is designed to help students understand the mathematical and computational foundations of neural networks before moving on to more advanced deep learning architectures.
 
 ## Author
 
