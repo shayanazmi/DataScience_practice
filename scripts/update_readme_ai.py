@@ -14,13 +14,21 @@ def get_git_diff_and_commits():
         log_cmd = ["git", "log", "-n", "5", "--pretty=format:- %s (%h)"]
         log_output = subprocess.check_output(log_cmd, text=True).strip()
         
+        # Get diff summary showing full file paths including subfolders
         stat_cmd = ["git", "diff", "HEAD~1", "HEAD", "--stat"]
         try:
             stat_output = subprocess.check_output(stat_cmd, text=True).strip()
         except Exception:
             stat_output = ""
+
+        # Get list of newly added or modified notebook files
+        name_cmd = ["git", "diff", "HEAD~1", "HEAD", "--name-status"]
+        try:
+            name_output = subprocess.check_output(name_cmd, text=True).strip()
+        except Exception:
+            name_output = ""
             
-        content = f"Recent Commits:\n{log_output}\n\nFile Changes Summary:\n{stat_output}"
+        content = f"Recent Commits:\n{log_output}\n\nChanged Files & Subfolders:\n{name_output}\n\nFile Stats:\n{stat_output}"
         return content
     except Exception as e:
         print(f"Error getting git info: {e}")
@@ -33,13 +41,15 @@ def call_nvidia_nim(content, api_key, retries=3):
         "Content-Type": "application/json"
     }
     
-    prompt = f"""You are an automated README update assistant.
-Analyze the following recent git commits and diff summary, then write a concise, clean 2-4 bullet point summary of what changed in the project.
+    prompt = f"""You are an automated README update assistant for a Data Science & AI repository.
+Analyze the following recent git commits and file changes (including Jupyter notebooks and practical subfolders like practical_1, practical_2, etc.), then write a concise, clean 2-4 bullet point summary of what changed or was added to the project.
 
-Format requirement:
-Return ONLY markdown bullet points starting with *. Do not include introductory text, conversational filler, or markdown code block fences (no ``` markdown).
+Format requirements:
+- If new Jupyter notebooks (.ipynb) or practical folders were added/updated, explicitly mention their project topic or notebook name.
+- Return ONLY markdown bullet points starting with *.
+- Do not include introductory text, conversational filler, or markdown code block fences (no ``` markdown).
 
-Git Info:
+Git & Changed Files Info:
 {content}
 """
 
@@ -126,10 +136,7 @@ def main():
         print("ERROR: NVIDIA_API_KEY environment variable not set. Please add NVIDIA_API_KEY to GitHub Secrets.")
         sys.exit(1)
 
-    print("Fetching git info...")
     git_info = get_git_diff_and_commits()
-    print(f"Git info retrieved:\n{git_info}\n")
-
     summary = call_nvidia_nim(git_info, api_key)
     if summary:
         print(f"Generated Summary:\n{summary}\n")
