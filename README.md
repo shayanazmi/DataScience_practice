@@ -6,12 +6,6 @@ A comprehensive collection of data science, exploratory data analysis (EDA), mac
 
 ---
 
-<!-- RECENT_UPDATES_START -->
-> 💡 **Latest Repo Updates (2026-07-25):**
-> * Added full documentation for ANN & Deep Learning lab practicals (Practical 1, 2, and 3).
-> * Initialized AI README auto-summarizer workflow powered by NVIDIA NIM (`meta/llama-3.3-70b-instruct`).
-<!-- RECENT_UPDATES_END -->
-
 ## 📌 Projects & Notebooks Overview
 
 ### 📊 Data Science & Machine Learning Projects
