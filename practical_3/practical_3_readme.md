@@ -2,7 +2,7 @@
 
 This project demonstrates how a **Feedforward Neural Network (FNN)** is built from scratch using **PyTorch** to learn the **AND logic gate** — a classic binary classification problem in neural network education.
 
-## 📌 Overview
+## Overview
 
 The AND gate is one of the simplest logical functions:
 
@@ -15,14 +15,14 @@ The AND gate is one of the simplest logical functions:
 
 This notebook defines a feedforward neural network class using PyTorch's `nn.Module`, trains it on all four AND gate input combinations, and demonstrates how the model learns to correctly classify each input after 100 epochs of training.
 
-## 🎯 Objective
+## Objective
 
 - Understand the architecture of a feedforward neural network with input, hidden, and output layers.
 - Implement forward pass, loss computation, and backpropagation using PyTorch.
 - Observe how the Adam optimizer adjusts weights and biases to minimize Binary Cross-Entropy Loss.
 - Compare raw predicted probabilities to final classified outputs using a 0.5 threshold.
 
-## 🧠 Model Architecture
+## Model Architecture
 
 ```
 Input (2 features)
@@ -37,7 +37,7 @@ Linear Layer (4 → 1 neuron, Sigmoid activation) ← Output layer
 - **Hidden layer**: 4 fully connected neurons with ReLU activation, introducing non-linearity.
 - **Output layer**: 1 neuron with Sigmoid activation, squashing the output into a `[0, 1]` probability for binary classification.
 
-## 🛠️ Requirements
+## Requirements
 
 - Python 3.x
 - [PyTorch](https://pytorch.org/)
@@ -48,7 +48,7 @@ Install dependencies:
 pip install torch
 ```
 
-## 📂 Notebook Structure
+## Notebook Structure
 
 | Section | Description |
 |---|---|
@@ -59,13 +59,13 @@ pip install torch
 | 5. Training the Model | Trains for 100 epochs using forward pass, loss computation, and backpropagation. |
 | 6. Predictions | Evaluates the trained model and prints probability and class for each input. |
 
-## ▶️ How to Run
+## ▶ How to Run
 
 1. Open the notebook `Practical_3_Feedforward_Neural_Network.ipynb` in Jupyter Notebook, JupyterLab, or Google Colab.
 2. Run all cells sequentially (**Runtime → Run all** in Colab, or **Cell → Run All** in Jupyter).
 3. Observe the printed predictions after training.
 
-## ✅ Expected Result
+## Expected Result
 
 After training for 100 epochs, the model should correctly classify all four inputs according to the AND truth table:
 
@@ -78,7 +78,7 @@ After training for 100 epochs, the model should correctly classify all four inpu
 
 > **Note:** Predicted probabilities may vary slightly between runs due to random weight initialization. The final class (0 or 1) is determined by a threshold of 0.5.
 
-## 📖 Key Takeaways
+## Key Takeaways
 
 - A feedforward neural network passes data in one direction — from input to output — with no cycles or loops.
 - PyTorch's `nn.Module` makes it easy to define custom network architectures using object-oriented programming.

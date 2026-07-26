@@ -4,7 +4,7 @@ This repository contains the implementation of a **Multi-Layer Perceptron (MLP)*
 
 ---
 
-## 📌 Overview
+## Overview
 
 While previous practicals focused on binary classification (such as logical AND gates with a single output neuron and Sigmoid activation), **Practical 4** expands neural network fundamentals to **multiclass classification**:
 
@@ -19,7 +19,7 @@ While previous practicals focused on binary classification (such as logical AND 
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 1. **Architecture Scaling**: Learn how to design an MLP with multiple hidden layers ($4 \to 10 \to 8 \to 3$) for multi-feature input and multi-class output.
 2. **Binary vs. Multiclass Dynamics**: Understand the mathematical shift from binary targets ($1$ output neuron, `sigmoid`, `binary_crossentropy`) to multi-class targets ($K$ output neurons, `softmax`, `categorical_crossentropy`).
@@ -28,7 +28,7 @@ While previous practicals focused on binary classification (such as logical AND 
 
 ---
 
-## 🧠 Model Architecture
+## Model Architecture
 
 ```
 Input Layer (4 features: Sepal & Petal length/width)
@@ -56,7 +56,7 @@ $$\text{Params} = (n_{\text{in}} \times n_{\text{out}}) + n_{\text{out}}$$
 
 ---
 
-## 📐 Mathematical Foundations
+## Mathematical Foundations
 
 ### 1. Feature Standardization (`StandardScaler`)
 Input features are rescaled using training set mean ($\mu_{\text{train}}$) and standard deviation ($\sigma_{\text{train}}$):
@@ -84,7 +84,7 @@ $$L(\theta) = -\sum_{k=1}^{K} y_k \log(\hat{y}_k) = -\log(\hat{y}_{\text{true cl
 
 ---
 
-## 🛠️ Requirements & Dependencies
+## Requirements & Dependencies
 
 - Python 3.8+
 - TensorFlow / Keras 2.x+
@@ -101,7 +101,7 @@ pip install tensorflow scikit-learn pandas numpy matplotlib
 
 ---
 
-## 📂 Notebook Workflow Structure
+## Notebook Workflow Structure
 
 | Section | Topic | Description |
 | :--- | :--- | :--- |
@@ -118,7 +118,7 @@ pip install tensorflow scikit-learn pandas numpy matplotlib
 
 ---
 
-## ▶️ How to Run
+## ▶ How to Run
 
 1. Open `lab4-keras-mlp-for-multiclass-classification.ipynb` in **Jupyter Notebook**, **JupyterLab**, or **Google Colab**.
 2. Execute all cells in sequential order (**Runtime → Run all** in Colab, or **Cell → Run All** in Jupyter).
@@ -126,7 +126,7 @@ pip install tensorflow scikit-learn pandas numpy matplotlib
 
 ---
 
-## ✅ Results & Experimental Evaluation
+## Results & Experimental Evaluation
 
 ### Test Set Metrics (Holdout $N = 30$)
 
@@ -153,7 +153,7 @@ Iris-versicolor       0.90      0.90      0.90        10
 
 ---
 
-## 📖 Key Takeaways
+## Key Takeaways
 
 1. **Multiclass Paradigm Shift**: Moving from binary to multiclass classification requires switching the output layer activation to `Softmax` and loss function to `Categorical Cross-Entropy`.
 2. **Feature Normalization is Essential**: Unscaled inputs create unbalanced gradient updates across features; `StandardScaler` ensures uniform learning rates and faster model convergence.
@@ -162,6 +162,6 @@ Iris-versicolor       0.90      0.90      0.90        10
 
 ---
 
-## ✍️ Author
+## Author
 
 Created as part of the **ANN & Deep Learning Lab** practical series demonstrating Multi-Layer Perceptron (MLP) multi-class classification using Keras/TensorFlow.

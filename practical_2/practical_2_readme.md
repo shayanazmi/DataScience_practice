@@ -2,7 +2,7 @@
 
 This project demonstrates how a minimal artificial neural network — a single hidden layer with 4 neurons feeding into one output neuron — can learn the **AND logic gate** from data, using TensorFlow/Keras and NumPy.
 
-## 📌 Overview
+## Overview
 
 The AND gate is one of the simplest logical functions:
 
@@ -15,13 +15,13 @@ The AND gate is one of the simplest logical functions:
 
 This notebook builds a tiny neural network from scratch (using Keras' `Sequential` API), trains it on all four input combinations, and shows how its predictions evolve from random guesses (before training) to accurate AND-gate outputs (after training).
 
-## 🎯 Objective
+## Objective
 
 - Understand how a neuron/network maps inputs to outputs using weights, bias, and an activation function.
 - Observe the effect of training (gradient descent via the Adam optimizer) on prediction accuracy.
 - Compare untrained vs. trained model behavior on a simple, well-understood logical function.
 
-## 🧠 Model Architecture
+## Model Architecture
 
 <img width="1180" height="798" alt="image" src="https://github.com/user-attachments/assets/992a1e32-0f5e-43be-942a-23656ae03c0a" />
 
@@ -30,7 +30,7 @@ This notebook builds a tiny neural network from scratch (using Keras' `Sequentia
 - **Hidden layer**: 4 fully connected neurons with ReLU activation, introducing non-linearity.
 - **Output layer**: 1 neuron with Sigmoid activation, squashing the output into a `[0, 1]` probability for binary classification.
 
-## 🛠️ Requirements
+## Requirements
 
 - Python 3.x
 - [TensorFlow](https://www.tensorflow.org/) (Keras API)
@@ -42,7 +42,7 @@ Install dependencies:
 pip install tensorflow numpy
 ```
 
-## 📂 Notebook Structure
+## Notebook Structure
 
 | Section | Description |
 |---|---|
@@ -55,13 +55,13 @@ pip install tensorflow numpy
 | 7. Predictions After Training | Re-evaluates the model and prints the learned AND-gate predictions. |
 | 8. Result | Summarizes and interprets the before/after comparison. |
 
-## ▶️ How to Run
+## ▶ How to Run
 
 1. Open the notebook `Practical_2_Single_Neuron_Model_ANN_Demo.ipynb` in Jupyter Notebook, JupyterLab, or Google Colab.
 2. Run all cells sequentially (**Runtime → Run all** in Colab, or **Cell → Run All** in Jupyter).
 3. Observe the printed predictions before and after training.
 
-## ✅ Expected Result
+## Expected Result
 
 After training for enough epochs, the model should correctly classify all four inputs according to the AND truth table:
 
@@ -74,7 +74,7 @@ After training for enough epochs, the model should correctly classify all four i
 
 > **Note:** With only 10 epochs, the model's loss may still be relatively high and predictions may not have fully converged. Increasing the number of epochs generally improves convergence toward the correct AND-gate behavior.
 
-## 📖 Key Takeaways
+## Key Takeaways
 
 - Even a very small neural network can learn simple logical functions through gradient-based optimization.
 - Before training, predictions are close to random (~0.5 probability) because weights start at their initial (untrained) values.

@@ -1,14 +1,13 @@
 # Data Science & Deep Learning Practice Projects
 
 A comprehensive collection of data science, exploratory data analysis (EDA), machine learning, and artificial neural network (ANN) lab practicals.
-
-🔗 **GitHub Repository:** [https://github.com/shayanazmi/DataScience_practice](https://github.com/shayanazmi/DataScience_practice)
+**GitHub Repository:** [https://github.com/shayanazmi/DataScience_practice](https://github.com/shayanazmi/DataScience_practice)
 
 ---
 
-## 📌 Projects & Notebooks Overview
+## Projects & Notebooks Overview
 
-### 📊 Data Science & Machine Learning Projects
+### Data Science & Machine Learning Projects
 
 | Project / Notebook | Description | Key Tech / Models |
 |-------------------|-------------|-------------------|
@@ -20,7 +19,7 @@ A comprehensive collection of data science, exploratory data analysis (EDA), mac
 
 ---
 
-### 🧠 ANN & Deep Learning Lab Practicals
+### ANN & Deep Learning Lab Practicals
 
 | Practical | Project Title | Description | Framework / Stack |
 |-----------|---------------|-------------|-------------------|
@@ -31,7 +30,7 @@ A comprehensive collection of data science, exploratory data analysis (EDA), mac
 
 ---
 
-## 🛠️ Tech Stack & Tools
+## Tech Stack & Tools
 
 - **Machine Learning & Data Science:** Python 3.x, Pandas, NumPy, Scikit-Learn, XGBoost
 - **Deep Learning Frameworks:** PyTorch, TensorFlow / Keras
