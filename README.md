@@ -24,9 +24,10 @@ A comprehensive collection of data science, exploratory data analysis (EDA), mac
 
 | Practical | Project Title | Description | Framework / Stack |
 |-----------|---------------|-------------|-------------------|
-| [**Practical 1**](file:///Users/shayanazmi/college/college/github-repo/DataScience_practice/practical_1/practical_1_readme.md) | **Perceptron Simulation** | Single-layer perceptron built from scratch using NumPy learning AND gate logic. | Python 3, NumPy |
-| [**Practical 2**](file:///Users/shayanazmi/college/college/github-repo/DataScience_practice/practical_2/practical_2_readme.md) | **Single Neuron Model ANN** | Artificial Neural Network (4 hidden neurons + ReLU + Sigmoid) training AND gate logic. | Keras, TensorFlow, NumPy |
-| [**Practical 3**](file:///Users/shayanazmi/college/college/github-repo/DataScience_practice/practical_3/practical_3_readme.md) | **Feedforward Neural Network (FNN)** | Multi-layer Feedforward Neural Network using PyTorch (`nn.Module`, Adam, BCELoss). | PyTorch, Python 3 |
+| [**Practical 1**](./practical_1/practical_1_readme.md) | **Perceptron Simulation** | Single-layer perceptron built from scratch using NumPy learning AND gate logic. | Python 3, NumPy |
+| [**Practical 2**](./practical_2/practical_2_readme.md) | **Single Neuron Model ANN** | Artificial Neural Network (4 hidden neurons + ReLU + Sigmoid) training AND gate logic. | Keras, TensorFlow, NumPy |
+| [**Practical 3**](./practical_3/practical_3_readme.md) | **Feedforward Neural Network (FNN)** | Multi-layer Feedforward Neural Network using PyTorch (`nn.Module`, Adam, BCELoss). | PyTorch, Python 3 |
+| [**Practical 4**](./practical_4/practical_4_readme.md) | **Keras MLP Multiclass Classification** | Multi-Layer Perceptron ($4 \to 10 \to 8 \to 3$) classifying Iris flower species using Softmax & Categorical Cross-Entropy. | Keras, TensorFlow, Scikit-Learn |
 
 ---
 
