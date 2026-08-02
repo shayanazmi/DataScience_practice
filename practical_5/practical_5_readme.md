@@ -2,6 +2,9 @@
 
 A comprehensive, production-grade computer vision laboratory demonstrating how to design, implement, train, evaluate, and explain **Convolutional Neural Networks (CNNs)** built with **TensorFlow 2.x / Keras** for binary image classification on the **Microsoft Cats vs. Dogs Dataset**.
 
+**Author:** Shayan Azmi  
+**Course:** ANN & Deep Learning (Sem 5)
+
 ---
 
 ## 📌 Executive Summary & Empirical Results
@@ -147,7 +150,7 @@ pip install tensorflow scikit-learn pandas numpy matplotlib seaborn pillow image
 
 | File Path | Description |
 | :--- | :--- |
-| [`cnn_implementation_keras.ipynb`](file:///Users/shayanazmi/college/college/sem5/ann_&_deeplearning/practical_5/cnn_implementation_keras.ipynb) | Primary executed notebook with preserved cell outputs and clean academic Markdown explanations. |
+| [`cnn_implementation_keras.ipynb`](file:///Users/shayanazmi/college/college/sem5/ann_&_deeplearning/practical_5/cnn_implementation_keras.ipynb) | Primary executed notebook by Shayan Azmi with preserved cell outputs and clean academic Markdown explanations. |
 | [`practical_5_readme.md`](file:///Users/shayanazmi/college/college/sem5/ann_&_deeplearning/practical_5/practical_5_readme.md) | Comprehensive lab documentation. |
 
 ---
@@ -159,3 +162,7 @@ pip install tensorflow scikit-learn pandas numpy matplotlib seaborn pillow image
 3. **Data Hygiene**: Purging corrupt JPEG byte headers and filtering near-duplicates via `pHash` guarantees runtime stability and prevents train-val data leakage.
 4. **Regularization Synergy**: Combining `BatchNormalization`, L2 weight decay ($5 \times 10^{-5}$), `Dropout(0.4)`, and `ReduceLROnPlateau` eliminated overfitting and boosted validation accuracy to **80.50%** (ROC-AUC **0.8843**).
 5. **Explainable AI Verification**: Grad-CAM heatmaps confirm the network focuses on anatomical facial features (ears, eyes, snout) rather than background noise.
+
+---
+**Author:** Shayan Azmi  
+**Repository:** [DataScience_practice](https://github.com/shayanazmi/DataScience_practice)

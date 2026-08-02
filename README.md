@@ -1,6 +1,8 @@
 # Data Science & Deep Learning Practice Projects
 
 A comprehensive collection of data science, exploratory data analysis (EDA), machine learning, and artificial neural network (ANN) lab practicals.
+
+**Author:** Shayan Azmi  
 **GitHub Repository:** [https://github.com/shayanazmi/DataScience_practice](https://github.com/shayanazmi/DataScience_practice)
 
 ---
@@ -38,3 +40,11 @@ A comprehensive collection of data science, exploratory data analysis (EDA), mac
 - **Computer Vision & Explainable AI:** OpenCV / PIL, `imagehash` (pHash), `visualkeras` (3D volume rendering), Grad-CAM (Class Activation Mapping)
 - **Visualization:** Matplotlib, Seaborn
 - **Environment:** Jupyter Notebooks, Google Colab, Kaggle GPU Environments
+
+---
+
+## Author & Contact
+
+- **Author:** Shayan Azmi
+- **GitHub:** [@shayanazmi](https://github.com/shayanazmi)
+- **Repository:** [DataScience_practice](https://github.com/shayanazmi/DataScience_practice)
