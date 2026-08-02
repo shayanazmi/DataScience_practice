@@ -27,12 +27,14 @@ A comprehensive collection of data science, exploratory data analysis (EDA), mac
 | [**Practical 2**](./practical_2/practical_2_readme.md) | **Single Neuron Model ANN** | Artificial Neural Network (4 hidden neurons + ReLU + Sigmoid) training AND gate logic. | Keras, TensorFlow, NumPy |
 | [**Practical 3**](./practical_3/practical_3_readme.md) | **Feedforward Neural Network (FNN)** | Multi-layer Feedforward Neural Network using PyTorch (`nn.Module`, Adam, BCELoss). | PyTorch, Python 3 |
 | [**Practical 4**](./practical_4/practical_4_readme.md) | **Keras MLP Multiclass Classification** | Multi-Layer Perceptron ($4 \to 10 \to 8 \to 3$) classifying Iris flower species using Softmax & Categorical Cross-Entropy. | Keras, TensorFlow, Scikit-Learn |
+| [**Practical 5**](./practical_5/practical_5_readme.md) | **CNN Image Classification & Grad-CAM** | Convolutional Neural Network (Conv2D, MaxPool, BatchNorm, Dropout, GAP) classifying Cats vs. Dogs with Grad-CAM & Feature Maps (**80.50% Acc, 0.8843 ROC-AUC**). | TensorFlow / Keras, Scikit-Learn, PIL, imagehash, visualkeras |
 
 ---
 
 ## Tech Stack & Tools
 
 - **Machine Learning & Data Science:** Python 3.x, Pandas, NumPy, Scikit-Learn, XGBoost
-- **Deep Learning Frameworks:** PyTorch, TensorFlow / Keras
+- **Deep Learning Frameworks:** PyTorch, TensorFlow 2.x / Keras
+- **Computer Vision & Explainable AI:** OpenCV / PIL, `imagehash` (pHash), `visualkeras` (3D volume rendering), Grad-CAM (Class Activation Mapping)
 - **Visualization:** Matplotlib, Seaborn
-- **Environment:** Jupyter Notebooks, Google Colab
+- **Environment:** Jupyter Notebooks, Google Colab, Kaggle GPU Environments

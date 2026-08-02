@@ -1,0 +1,16 @@
+{
+  "id": "shayanazmi/practical-5-cnn-dogs-vs-cats",
+  "title": "Practical 5: CNN Dogs vs Cats Classification",
+  "code_file": "cnn_using_keras.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "dataset_sources": [
+    "crawford/cat-and-dog"
+  ],
+  "kernel_sources": [],
+  "competition_sources": []
+}

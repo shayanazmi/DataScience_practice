@@ -1,0 +1,86 @@
+# =====================================================================
+# GitIgnore for Data Science & Deep Learning Practice Projects
+# =====================================================================
+
+# ---------------------------------------------------------------------
+# Large Datasets & Media Directories (Do NOT commit raw datasets)
+# ---------------------------------------------------------------------
+PetImages/
+PetImages_Subset/
+kagglecatsanddogs_5340/
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+
+# ---------------------------------------------------------------------
+# Model Weights, Checkpoints & Artifacts
+# ---------------------------------------------------------------------
+*.keras
+*.h5
+*.hdf5
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.tflite
+*.pkl
+*.joblib
+
+# ---------------------------------------------------------------------
+# Python Cache & Compiled Files
+# ---------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ---------------------------------------------------------------------
+# Jupyter Notebook Checkpoints & Cache
+# ---------------------------------------------------------------------
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+.pytest_cache/
+.virtual_documents/
+
+# ---------------------------------------------------------------------
+# Virtual Environments
+# ---------------------------------------------------------------------
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# ---------------------------------------------------------------------
+# Operating System & IDE Files
+# ---------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
