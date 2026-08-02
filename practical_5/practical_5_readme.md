@@ -10,7 +10,7 @@ We conduct a quantitative empirical benchmark across three custom CNN architectu
 
 ### Quantitative Performance Comparison
 
-| Metric | Base Model | Tuned CNN | GAP CNN (Kaggle) | Best Performer |
+| Metric | Base Model | Tuned CNN | GAP CNN | Best Performer |
 | :--- | :---: | :---: | :---: | :---: |
 | **Accuracy** | 76.00% | **80.50%** | 67.88% | **Tuned CNN (+4.50%)** |
 | **Precision** | 79.21% | **85.25%** | 67.33% | **Tuned CNN (+6.04%)** |
@@ -22,7 +22,7 @@ We conduct a quantitative empirical benchmark across three custom CNN architectu
 
 ---
 
-## 🧠 Hybrid Practical 1 & Andrej Karpathy Pedagogy
+## 🧠 Core Pedagogical & Engineering Guidelines
 
 All notebook cells and lab documentation adhere strictly to the following hybrid execution guidelines:
 
@@ -147,9 +147,7 @@ pip install tensorflow scikit-learn pandas numpy matplotlib seaborn pillow image
 
 | File Path | Description |
 | :--- | :--- |
-| [`cnn-dl (1).ipynb`](file:///Users/shayanazmi/college/college/sem5/ann_&_deeplearning/practical_5/cnn-dl%20(1).ipynb) | Primary executed notebook with preserved cell outputs and Andrej Karpathy Markdown cells. |
-| [`cnn-dl.ipynb`](file:///Users/shayanazmi/college/college/sem5/ann_&_deeplearning/practical_5/cnn-dl.ipynb) | Synced copy for environment flexibility. |
-| [`cnn_using_keras.ipynb`](file:///Users/shayanazmi/college/college/sem5/ann_&_deeplearning/practical_5/cnn_using_keras.ipynb) | Synced copy matching main curriculum format. |
+| [`cnn_implementation_keras.ipynb`](file:///Users/shayanazmi/college/college/sem5/ann_&_deeplearning/practical_5/cnn_implementation_keras.ipynb) | Primary executed notebook with preserved cell outputs and clean academic Markdown explanations. |
 | [`practical_5_readme.md`](file:///Users/shayanazmi/college/college/sem5/ann_&_deeplearning/practical_5/practical_5_readme.md) | Comprehensive lab documentation. |
 
 ---
