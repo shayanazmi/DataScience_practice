@@ -90,4 +90,5 @@ After training for 100 epochs, the model should correctly classify all four inpu
 
 ## Author
 
+**Author:** Shayan Azmi  
 Created as part of ANN and Deep Learning Lab practical demonstrating the implementation of a Feedforward Neural Network using PyTorch.

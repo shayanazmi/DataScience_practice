@@ -84,4 +84,5 @@ After training for enough epochs, the model should correctly classify all four i
 
 ## Author
 
-Created as part of ANN and Deep Learning Lab practical demonstrating the implementation of a Perceptron using NumPy.
+**Author:** Shayan Azmi  
+Created as part of ANN and Deep Learning Lab practical demonstrating the implementation of a Single Neuron Model ANN.

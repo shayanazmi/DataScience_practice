@@ -76,4 +76,5 @@ After training, the perceptron correctly classifies all AND gate inputs and demo
 
 ## Author
 
+**Author:** Shayan Azmi  
 Created as part of ANN and Deep Learning Lab practical demonstrating the implementation of a Perceptron using NumPy.

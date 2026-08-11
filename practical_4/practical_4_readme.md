@@ -164,4 +164,5 @@ Iris-versicolor       0.90      0.90      0.90        10
 
 ## Author
 
+**Author:** Shayan Azmi  
 Created as part of the **ANN & Deep Learning Lab** practical series demonstrating Multi-Layer Perceptron (MLP) multi-class classification using Keras/TensorFlow.
