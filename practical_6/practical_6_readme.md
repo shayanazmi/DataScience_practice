@@ -107,14 +107,20 @@ Inputs are scaled using training set parameters to prevent feature magnitude imb
 $$z = \frac{x - \mu_{\text{train}}}{\sigma_{\text{train}}}$$
 
 ### 3. Activation Functions
-* **ReLU (Rectified Linear Unit):** $f(x) = \max(0, x)$
-* **Sigmoid:** $f(x) = \frac{1}{1 + e^{-x}}$
-* **Tanh (Hyperbolic Tangent):** $\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$
+* **ReLU (Rectified Linear Unit):**
+$$f(x) = \max(0, x)$$
+* **Sigmoid:**
+$$f(x) = \frac{1}{1 + e^{-x}}$$
+* **Tanh (Hyperbolic Tangent):**
+$$\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$$
 
 ### 4. Loss Functions & Optimization Penalties
-* **Mean Squared Error (MSE):** $\mathcal{L}_{\text{MSE}} = \frac{1}{N} \sum_{i=1}^N (y_i - \hat{y}_i)^2$
-* **Mean Absolute Error (MAE):** $\mathcal{L}_{\text{MAE}} = \frac{1}{N} \sum_{i=1}^N |y_i - \hat{y}_i|$
-* **Mean Absolute Percentage Error (MAPE):** $\mathcal{L}_{\text{MAPE}} = \frac{100\%}{N} \sum_{i=1}^N \left| \frac{y_i - \hat{y}_i}{y_i} \right|$
+* **Mean Squared Error (MSE):**
+$$\mathcal{L}_{\text{MSE}} = \frac{1}{N} \sum_{i=1}^N (y_i - \hat{y}_i)^2$$
+* **Mean Absolute Error (MAE):**
+$$\mathcal{L}_{\text{MAE}} = \frac{1}{N} \sum_{i=1}^N |y_i - \hat{y}_i|$$
+* **Mean Absolute Percentage Error (MAPE):**
+$$\mathcal{L}_{\text{MAPE}} = \frac{100\%}{N} \sum_{i=1}^N \left| \frac{y_i - \hat{y}_i}{y_i} \right|$$
 
 ---
 
