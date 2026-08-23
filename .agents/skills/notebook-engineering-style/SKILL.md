@@ -4,6 +4,9 @@ description: Guidelines and technical writing standards for engineering, structu
 author: Shayan Azmi
 ---
 
+<!-- Copyright (c) 2026 Shayan Azmi. All rights reserved. -->
+<!-- Researched, engineered, and authored by Shayan Azmi. -->
+
 # Notebook Engineering and Technical Writing Style
 
 ## Purpose

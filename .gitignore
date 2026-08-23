@@ -3,18 +3,29 @@
 # =====================================================================
 
 # ---------------------------------------------------------------------
-# Large Datasets & Media Directories (Do NOT commit raw datasets)
+# Large Datasets & Raw Data Directories (Do NOT commit datasets)
 # ---------------------------------------------------------------------
+data/
+**/data/
 PetImages/
 PetImages_Subset/
 kagglecatsanddogs_5340/
+human+activity+recognition+using+smartphones/
+**/human+activity+recognition+using+smartphones/
+UCI HAR Dataset/
+**/UCI HAR Dataset/
 *.zip
 *.tar.gz
 *.tgz
 *.rar
+*.7z
+*.npy
+*.npz
+*.parquet
+*.feather
 
 # ---------------------------------------------------------------------
-# Model Weights, Checkpoints & Artifacts
+# Model Weights, Checkpoints & Exported Artifacts
 # ---------------------------------------------------------------------
 *.keras
 *.h5
@@ -86,7 +97,7 @@ Thumbs.db
 *.swo
 
 # ---------------------------------------------------------------------
-# Local Environment Variables & Secrets (Do NOT commit keys/secrets)
+# Local Environment Variables & Secrets
 # ---------------------------------------------------------------------
 .env
 .env.local
@@ -96,15 +107,12 @@ Thumbs.db
 *.env
 
 # ---------------------------------------------------------------------
-# Logs and Databases
+# Logs, Databases & Scratch
 # ---------------------------------------------------------------------
 *.log
 *.sqlite
-
-# ---------------------------------------------------------------------
-# VS Code Local History & Temp Files
-# ---------------------------------------------------------------------
+scratch/
+**/scratch/
 .history/
 tmp/
 temp/
-
