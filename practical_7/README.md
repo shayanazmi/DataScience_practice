@@ -62,6 +62,59 @@ Dense Output Layer (6 units, Softmax Activation)                                
 Total Trainable Parameters: 40,518
 ```
 
+#### Layer Specification Table
+
+| Layer | Type | Output Dimension | Activation | Regularization | Parameter Formula & Count |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Input Layer** | Input | (561,) | — | — | 0 |
+| **Dense 1** | Fully Connected | (64,) | ReLU / Sigmoid / Tanh | L2 = 0.001 | (561 * 64) + 64 = **35,968** |
+| **Dropout 1** | Regularization | (64,) | — | Rate = 0.50 | 0 |
+| **Dense 2** | Fully Connected | (64,) | ReLU / Sigmoid / Tanh | L2 = 0.001 | (64 * 64) + 64 = **4,160** |
+| **Dropout 2** | Regularization | (64,) | — | Rate = 0.50 | 0 |
+| **Output Layer**| Fully Connected | (6,) | Softmax | — | (64 * 6) + 6 = **390** |
+| **Total** | **Sequential** | **(6,)** | **Softmax** | **L2 + Dropout** | **40,518 Parameters** |
+
+#### Model Configurations Summary
+
+| Model | Hidden Activation | Optimizer | Initial Learning Rate | Momentum / Decay | Batch Size | Visual Diagram Asset |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Model 1** | ReLU | Adam | 0.001 | beta1=0.9, beta2=0.999 | 64 | `practical_7/arch_diagrams/model_1_nn.jpg` |
+| **Model 2** | Sigmoid | Adam | 0.002 | beta1=0.9, beta2=0.999 | 64 | `practical_7/arch_diagrams/model_2_nn.jpg` |
+| **Model 3** | Tanh | Adam | 0.001 | beta1=0.9, beta2=0.999 | 64 | `practical_7/arch_diagrams/model_3_nn.jpg` |
+| **Model 4** | ReLU | SGD with Momentum | 0.010 | momentum = 0.9 | 64 / 128 | `practical_7/arch_diagrams/model_4_nn.jpg` |
+| **Model 5** | ReLU | RMSprop | 0.0005 | rho = 0.9 | 64 | `practical_7/arch_diagrams/model_5_nn.jpg` |
+
+#### Consolidated Model Architecture Overview
+
+![Consolidated Model Architectures](./consolidated_model_architectures.png)
+
+#### Individual Neural Network Architecture Breakdown
+
+##### Model 1: ReLU + Adam
+![Model 1 Architecture](./arch_diagrams/model_1_nn.jpg)
+* **Architecture:** 561 inputs to Dense(64, ReLU) with 50% Dropout to Dense(64, ReLU) with 50% Dropout to 6-class Softmax.
+* **Mechanism:** Constant unit gradient for active neurons prevents vanishing gradients, enabling fast early convergence.
+
+##### Model 2: Sigmoid + Adam
+![Model 2 Architecture](./arch_diagrams/model_2_nn.jpg)
+* **Architecture:** 561 inputs to Dense(64, Sigmoid) with 50% Dropout to Dense(64, Sigmoid) with 50% Dropout to 6-class Softmax.
+* **Mechanism:** Maximum derivative of 0.25 squashes backpropagated gradients in saturated regions, slowing initial training.
+
+##### Model 3: Tanh + Adam
+![Model 3 Architecture](./arch_diagrams/model_3_nn.jpg)
+* **Architecture:** 561 inputs to Dense(64, Tanh) with 50% Dropout to Dense(64, Tanh) with 50% Dropout to 6-class Softmax.
+* **Mechanism:** Zero-centered output range (-1 to +1) produces balanced gradient signs, surpassing Sigmoid.
+
+##### Model 4: ReLU + SGD with Momentum (0.9) [Top Performer]
+![Model 4 Architecture](./arch_diagrams/model_4_nn.jpg)
+* **Architecture:** 561 inputs to Dense(64, ReLU) with 50% Dropout to Dense(64, ReLU) with 50% Dropout to 6-class Softmax.
+* **Mechanism:** Momentum term (0.9) accumulates past velocity, dampening oscillations and navigating flat loss valleys to achieve top test generalization (95.05% test accuracy, 87.98% sitting recall).
+
+##### Model 5: ReLU + RMSprop
+![Model 5 Architecture](./arch_diagrams/model_5_nn.jpg)
+* **Architecture:** 561 inputs to Dense(64, ReLU) with 50% Dropout to Dense(64, ReLU) with 50% Dropout to 6-class Softmax.
+* **Mechanism:** Dynamically scales step sizes using a moving average of squared gradients (lr=0.0005).
+
 ### 2.3 Dynamic Training Controls
 * **ReduceLROnPlateau:** Halves the learning rate (factor = 0.5) if validation loss does not improve for 3 epochs (patience = 3), enabling fine parameter adjustments.
 * **EarlyStopping:** Halts training after 8 epochs of stagnant validation loss (patience = 8, starting after epoch 10) and restores the best validation checkpoint (restore_best_weights = True).
