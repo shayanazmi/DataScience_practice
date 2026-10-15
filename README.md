@@ -22,7 +22,7 @@
 ## ⚡ Repository at a Glance
 
 ```
-├── 🧠 7 Deep Learning Practicals (Perceptrons, PyTorch FNN, Keras MLP, CNN + Grad-CAM XAI, HAR Sensors)
+├── 🧠 8 Deep Learning Practicals (Perceptrons, PyTorch FNN, Keras MLP, CNN + Grad-CAM XAI, HAR Sensors, RNN Text Classification)
 ├── 📊 5 Industry ML Pipelines (Device-Segmented XGBoost, Predictive Maintenance, Churn, Insurance EDA)
 ├── 🔬 Autonomous Research Harness (.agents/skills closed-loop experimental engineering)
 └── 🚀 1-Click Reproducible (Zero-setup Google Colab launchers for all notebooks)
@@ -96,7 +96,34 @@ flowchart TD
 
 ---
 
-### 3. Industrial End-to-End ML Pipelines
+### 3. Recurrent Neural Networks (SimpleRNN & Stacked) for NLP — Practical 8
+> **Binary Sentiment Classification on 50,000 IMDB Movie Reviews** | **82.29% Test Accuracy (A1)** | **0.4462 Test Loss (A3)**
+
+Sequential deep learning pipeline using TensorFlow/Keras to analyze textual semantics across movie reviews. Features prefix zero-padding, word embedding lookup, single vs. two-layer stacked architectures, and empirical overfitting diagnostics.
+
+```mermaid
+flowchart LR
+    subgraph Preprocessing["Text Preprocessing"]
+        A[Raw Text Review] --> B[Tokenize Top 10k Vocab]
+        B --> C[Prefix Padding T=200]
+    end
+    subgraph Architecture["Recurrent Network Topology"]
+        C --> D[Embedding 128-D]
+        D --> E[SimpleRNN 64 Units]
+        E --> F[Dense Sigmoid Output]
+    end
+    subgraph Diagnostics["Diagnostics & Real Inference"]
+        F --> G[Sentiment: Positive vs Negative]
+        E -.->|Val Loss Minimum at Ep 2| H[Early Stopping & 32-Unit Bottleneck]
+    end
+```
+
+- **Highlights:** Prefix sequence padding (`padding='pre'`) preserving trailing sentiment tokens, systematic 9-run grid sweep (Units, Epochs, Batch Size), stacked 2-layer RNN with `return_sequences=True`, 100% (5/5) accuracy on custom real-world reviews, and IEEE standard experimental methodology.
+- **Deep Dive:** [`practical_8/README.md`](./practical_8/README.md) • [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shayanazmi/DataScience_practice/blob/main/practical_8/practical_8_rnn_text_classification.ipynb)
+
+---
+
+### 4. Industrial End-to-End ML Pipelines
 Real-world operational intelligence notebooks built with production-grade data pipelines:
 
 | Project | Key Focus & Technical Novelty | Architecture / Stack | Launch |
@@ -120,6 +147,7 @@ Comprehensive practicals covering fundamental perceptrons to advanced deep learn
 | **P5** | [**CNN & Grad-CAM XAI**](./practical_5/practical_5_readme.md) | 4-Stage Conv2D + GAP architecture on Cats vs Dogs with visual interpretability and activation maps. | Keras, TensorFlow, Grad-CAM | **80.50% Acc, 0.8843 ROC-AUC** | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shayanazmi/DataScience_practice/blob/main/practical_5/cnn_implementation_keras.ipynb) |
 | **P6** | [**Grid Load Forecasting**](./practical_6/practical_6_readme.md) | Tapered regression MLP ($29 \to 64 \to 32 \to 16 \to 1$) predicting national grid load with multi-activation sweeps. | Keras, Scikit-Learn, Pandas | **9,990 MW MAE, 5.51% MAPE** | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shayanazmi/DataScience_practice/blob/main/practical_6/p6.ipynb) |
 | **P7** | [**Smartphone HAR MLP**](./practical_7/README.md) | Deep sensory MLP on 561-D telemetry across 6 activities with Subject-Independent cross-validation. | Keras, TensorFlow, Seaborn | **95.05% Acc, 0.9498 Macro F1** | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shayanazmi/DataScience_practice/blob/main/practical_7/practical_7_keras_mlp_multiclass.ipynb) |
+| **P8** | [**RNN Text Classification**](./practical_8/README.md) | Recurrent Neural Network for binary sentiment analysis on IMDB (50k reviews), prefix padding ($T=200$), 128-D embeddings, single & stacked SimpleRNN sweeps. | TensorFlow / Keras, SimpleRNN | **82.29% Acc (A1), 80.68% (Stacked)** | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shayanazmi/DataScience_practice/blob/main/practical_8/practical_8_rnn_text_classification.ipynb) |
 
 ---
 
@@ -173,8 +201,7 @@ conda create -n ml-lab python=3.10 -y
 conda activate ml-lab
 
 # 3. Install dependencies
-pip install -r practical_7/requirements.txt  # Or install core ML/DL packages:
-pip install torch torchvision tensorflow scikit-learn xgboost pandas numpy matplotlib seaborn jupyterlab
+pip install -r requirements.txt
 
 # 4. Launch JupyterLab
 jupyter lab

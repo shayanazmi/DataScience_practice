@@ -1,0 +1,225 @@
+{
+  "num_train": 25000,
+  "num_test": 25000,
+  "vocab_size": 10000,
+  "max_len": 200,
+  "baseline": {
+    "params": 1292417,
+    "train_time_s": 37.14,
+    "history": {
+      "accuracy": [
+        0.684499979019165,
+        0.8632500171661377,
+        0.9253000020980835,
+        0.9675999879837036,
+        0.9882000088691711
+      ],
+      "loss": [
+        0.5791395306587219,
+        0.3276054263114929,
+        0.19820012152194977,
+        0.09516789019107819,
+        0.037683676928281784
+      ],
+      "val_accuracy": [
+        0.7692000269889832,
+        0.8137999773025513,
+        0.8101999759674072,
+        0.795199990272522,
+        0.7993999719619751
+      ],
+      "val_loss": [
+        0.4842046797275543,
+        0.43434810638427734,
+        0.5314342975616455,
+        0.6543474197387695,
+        0.7436131238937378
+      ]
+    },
+    "test_loss": 0.7385596036911011,
+    "test_acc": 0.7984399795532227
+  },
+  "hyperparameter_experiments": [
+    {
+      "Experiment": "A1",
+      "Parameter": "RNN = 32",
+      "RNN Units": 32,
+      "Epochs": 5,
+      "Batch Size": 64,
+      "Training Accuracy": 0.9785000085830688,
+      "Validation Accuracy": 0.8266000151634216,
+      "Test Accuracy": 0.8228800296783447,
+      "Test Loss": 0.6336951851844788,
+      "Training Time (s)": 25.3
+    },
+    {
+      "Experiment": "A2",
+      "Parameter": "RNN = 64",
+      "RNN Units": 64,
+      "Epochs": 5,
+      "Batch Size": 64,
+      "Training Accuracy": 0.9695000052452087,
+      "Validation Accuracy": 0.7289999723434448,
+      "Test Accuracy": 0.7262799739837646,
+      "Test Loss": 0.8249383568763733,
+      "Training Time (s)": 35.68
+    },
+    {
+      "Experiment": "A3",
+      "Parameter": "RNN = 128",
+      "RNN Units": 128,
+      "Epochs": 5,
+      "Batch Size": 64,
+      "Training Accuracy": 0.8718500137329102,
+      "Validation Accuracy": 0.8306000232696533,
+      "Test Accuracy": 0.8189200162887573,
+      "Test Loss": 0.4461788535118103,
+      "Training Time (s)": 67.61
+    },
+    {
+      "Experiment": "B1",
+      "Parameter": "Epochs = 3",
+      "RNN Units": 64,
+      "Epochs": 3,
+      "Batch Size": 64,
+      "Training Accuracy": 0.8891500234603882,
+      "Validation Accuracy": 0.6908000111579895,
+      "Test Accuracy": 0.6896399855613708,
+      "Test Loss": 0.6854007244110107,
+      "Training Time (s)": 21.39
+    },
+    {
+      "Experiment": "B2",
+      "Parameter": "Epochs = 5",
+      "RNN Units": 64,
+      "Epochs": 5,
+      "Batch Size": 64,
+      "Training Accuracy": 0.984250009059906,
+      "Validation Accuracy": 0.7355999946594238,
+      "Test Accuracy": 0.7380399703979492,
+      "Test Loss": 0.8407817482948303,
+      "Training Time (s)": 34.95
+    },
+    {
+      "Experiment": "B3",
+      "Parameter": "Epochs = 10",
+      "RNN Units": 64,
+      "Epochs": 10,
+      "Batch Size": 64,
+      "Training Accuracy": 0.9976500272750854,
+      "Validation Accuracy": 0.7612000107765198,
+      "Test Accuracy": 0.7559199929237366,
+      "Test Loss": 1.1180499792099,
+      "Training Time (s)": 69.75
+    },
+    {
+      "Experiment": "C1",
+      "Parameter": "Batch = 32",
+      "RNN Units": 64,
+      "Epochs": 5,
+      "Batch Size": 32,
+      "Training Accuracy": 0.8377500176429749,
+      "Validation Accuracy": 0.7261999845504761,
+      "Test Accuracy": 0.7360000014305115,
+      "Test Loss": 0.6077753901481628,
+      "Training Time (s)": 44.68
+    },
+    {
+      "Experiment": "C2",
+      "Parameter": "Batch = 64",
+      "RNN Units": 64,
+      "Epochs": 5,
+      "Batch Size": 64,
+      "Training Accuracy": 0.9855499863624573,
+      "Validation Accuracy": 0.8154000043869019,
+      "Test Accuracy": 0.8118799924850464,
+      "Test Loss": 0.7307882308959961,
+      "Training Time (s)": 35.68
+    },
+    {
+      "Experiment": "C3",
+      "Parameter": "Batch = 128",
+      "RNN Units": 64,
+      "Epochs": 5,
+      "Batch Size": 128,
+      "Training Accuracy": 0.9876999855041504,
+      "Validation Accuracy": 0.7864000201225281,
+      "Test Accuracy": 0.7800800204277039,
+      "Test Loss": 0.7637388110160828,
+      "Training Time (s)": 36.17
+    }
+  ],
+  "inference_results": [
+    {
+      "Review": "Review 1",
+      "Review Text": "An absolute masterpiece with incredible performances, stunning visuals, and a deeply emotional storyline that kept me engaged throughout.",
+      "Actual/Expected Sentiment": "Positive",
+      "Predicted Sentiment": "Positive",
+      "Probability": 0.9948
+    },
+    {
+      "Review": "Review 2",
+      "Review Text": "A completely predictable and boring disaster with terrible acting, sloppy pacing, and utterly wasted potential.",
+      "Actual/Expected Sentiment": "Negative",
+      "Predicted Sentiment": "Negative",
+      "Probability": 0.0019
+    },
+    {
+      "Review": "Review 3",
+      "Review Text": "Brilliantly directed and thoroughly captivating from start to finish, featuring sharp dialogue and outstanding character development.",
+      "Actual/Expected Sentiment": "Positive",
+      "Predicted Sentiment": "Positive",
+      "Probability": 0.9999
+    },
+    {
+      "Review": "Review 4",
+      "Review Text": "Painfully dull and poorly written, with atrocious dialogue and completely unconvincing character motivations that ruined the film.",
+      "Actual/Expected Sentiment": "Negative",
+      "Predicted Sentiment": "Negative",
+      "Probability": 0.0017
+    },
+    {
+      "Review": "Review 5",
+      "Review Text": "A remarkably heartwarming and inventive cinematic experience that balances humor, suspense, and poignant drama beautifully.",
+      "Actual/Expected Sentiment": "Positive",
+      "Predicted Sentiment": "Positive",
+      "Probability": 0.9999
+    }
+  ],
+  "two_layer": {
+    "params": 1300673,
+    "train_time_s": 59.81,
+    "history": {
+      "accuracy": [
+        0.6563000082969666,
+        0.7977499961853027,
+        0.8773499727249146,
+        0.9016500115394592,
+        0.9310500025749207
+      ],
+      "loss": [
+        0.5880444049835205,
+        0.4366130828857422,
+        0.2959267199039459,
+        0.2503680884838104,
+        0.18526344001293182
+      ],
+      "val_accuracy": [
+        0.8217999935150146,
+        0.8209999799728394,
+        0.8122000098228455,
+        0.8342000246047974,
+        0.8148000240325928
+      ],
+      "val_loss": [
+        0.40845826268196106,
+        0.4276546835899353,
+        0.44006699323654175,
+        0.4435628056526184,
+        0.540723443031311
+      ]
+    },
+    "test_loss": 0.5489884614944458,
+    "test_acc": 0.8068400025367737
+  }
+}

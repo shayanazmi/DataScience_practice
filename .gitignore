@@ -116,3 +116,24 @@ scratch/
 .history/
 tmp/
 temp/
+
+# ---------------------------------------------------------------------
+# Internal Presentations, Exam Folders & Non-Coursework Reports
+# ---------------------------------------------------------------------
+CIA 2/
+**/CIA 2/
+presentation_internship_report.html
+*_internship_report*
+
+# ---------------------------------------------------------------------
+# Video Renders & Animation Assets (Manim / Presentations)
+# ---------------------------------------------------------------------
+*.mp4
+*.mov
+*.avi
+*.mkv
+partial_movie_files/
+**/partial_movie_files/
+manim_assets/
+**/manim_assets/
+
